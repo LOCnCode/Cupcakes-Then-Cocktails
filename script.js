@@ -46,9 +46,8 @@ $("#alcohol-select").on("click", "a", function(){
 // wrap event listener, on submit do this function
 recipeApp.getUserChoice = function() {
 	var usersChoice = $('input').val();
-	console.log(usersChoice);
+	// console.log(usersChoice);
 	recipeApp.getRecipes(usersChoice);
-
 }
 
 recipeApp.showData = function(recipes) {
@@ -56,8 +55,6 @@ recipeApp.showData = function(recipes) {
 	$('#app').empty();
 
 	recipes.matches.forEach(function(recipe){
-		// console.log(recipe.imageUrlsBySize['90']);
-			// $(".recipeContainer").remove();
 			const recipeWrapper = $("<div>").addClass("recipeWrapper");
 			const recipeContainer = $("<div>").addClass("recipeContainer container");
 			const recipeName = $("<h2>").text(recipe.recipeName).addClass("recipeName");
@@ -65,13 +62,11 @@ recipeApp.showData = function(recipes) {
 			const emptyDiv = $("<div>").addClass("emptyDiv")
 			const recipeButtonContainer = $("<div>").attr("id", recipe.id).addClass("buttonContainer container");
 			const recipeButton = $("<button>").text("Get Recipe").addClass("getRecipeButton button").data("recipe", recipe.id)
-			const recipeIngredientsBox = $("<div>").addClass("ingredientsBox");
-			// const ingredientsDialogue = $("p").text(content [,"Hello World"]);
+			// const recipeIngredientsBox = $("<div>").addClass("ingredientsBox");
 			const recipeIngredients = $("<p>").text(recipe.ingredients).addClass("ingredients");
 
 			recipeContainer.append(recipeName, recipeImage, emptyDiv);
-			recipeButtonContainer.append(recipeButton, recipeIngredientsBox); 
-			// recipeIngredientsBox.append(recipeIngredients);
+			recipeButtonContainer.append(recipeButton); 
 			recipeWrapper.append(recipeContainer, recipeButtonContainer);
 
 			$("#app").append(recipeWrapper);
@@ -81,12 +76,14 @@ recipeApp.showData = function(recipes) {
 
 
 recipeApp.events = function() {
-	//setup a click listener for when the image is clicked 
+	//setup a click listener for when the button is clicked 
 
 	$("#app").on("click",".getRecipeButton",function() {
 		// console.log("clicked");
 
 		var clickedItem = $(this).data(); 
+
+		$(this).prop('disabled', true);
 
 		recipeApp.getRecipeById(clickedItem.recipe);
 	});
@@ -103,7 +100,7 @@ recipeApp.getRecipeById = function(recipeId) {
 				_app_key: recipeApp.appKey
 			}
 		}).then(function(data){
-			console.log(data)
+			// console.log(data)
 
 			recipeApp.showRecipeDetails(data);
 		})
