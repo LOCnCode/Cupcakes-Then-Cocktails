@@ -39,7 +39,7 @@ recipeApp.getRecipes = function(alcohol) {  //alcohol
 $("#alcohol-select").on("click", "a", function(){
     // console.log("new alcohol selected");
     var alcohol = $(this).attr("id");
-		console.log(alcohol);
+		// console.log(alcohol);
 		recipeApp.getRecipes(alcohol);
 });
 
@@ -65,8 +65,8 @@ recipeApp.showData = function(recipes) {
 			// const recipeIngredientsBox = $("<div>").addClass("ingredientsBox");
 			const recipeIngredients = $("<p>").text(recipe.ingredients).addClass("ingredients");
 
-			recipeContainer.append(recipeName, recipeImage, emptyDiv);
-			recipeButtonContainer.append(recipeButton); 
+			recipeContainer.append(recipeImage);
+			recipeButtonContainer.append(recipeName, recipeButton); 
 			recipeWrapper.append(recipeContainer, recipeButtonContainer);
 
 			$("#app").append(recipeWrapper);

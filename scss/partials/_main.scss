@@ -55,7 +55,11 @@ h2 {
 	letter-spacing: 3px;
 }
 
-.wrapper {
+.layout {
+	width: 100%;
+	background-color: orange;
+}
+.wrapper, .alcoholChoices {
 	width: 75%;
 	background-color: white;
 	margin:0 auto;

@@ -1,43 +1,34 @@
 
 
-.choice-container {
- 	width: 15%;
+.alcoholChoices {
+	padding: 1%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .alcohol-select {
-	margin: 15% 0 4% 15%;
-	// margin-left: 4%;
+	width: 100%;
+	background-color: lemonchiffon;
+	display: inline-block;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;	
 }
 
-.alcohol-choice {
+.choice {
 	width: 100%;
 	padding-bottom: 2%;
 		a {
 			text-decoration: none;
 			text-transform: uppercase;
 			color: $dkorange;
+			font-size: 20px;
 			font-weight: 400;
 		}
 }
 
-.layoutImagesContainer {
-	width: 100%;
-	height: 90%;
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-	justify-content: space-between; 
-}
-
-
-.layoutImage {
-	width: 100%;
-	margin-left: 2%;
-		img {
-		width: 100%;
-		margin: 5% 4%;
-	}		
-}
 
 
 @media (max-width: 940px) { //green
