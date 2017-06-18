@@ -1,22 +1,20 @@
 .layoutImagesContainer {
 	width: 20%;
-	height: 100%;
+	padding: 0 2%;
 	display: flex;
 	flex-direction: column;
 	align-content: center;
-	justify-content: space-between; 
-	background-color: grey;
+	justify-content: space-around; 
+
 }
 
 .layoutImage {
 	width: 100%;
-	margin-left: 2%;
+	margin: 0 2%;
 		img {
 		width: 100%;
-		margin: 5% 4%;
 	}		
 }
-
 
 .recipeWrapper { //wraps around the recipe container & recipe button container
 	display: flex;
@@ -28,7 +26,7 @@
 
 .container { //affects both the recipe container & recipe button container
 	width: 60%;
-	margin: 0 2%;
+	margin: 0 auto;
 }
 
 .recipeContainer { //left side, holds the cupcake name and image
@@ -42,7 +40,7 @@
 }
 
 .gallery-image { //cupcake image, left
-	width: 350px;
+	width: 320px;
 	height: 250px;
 	display: block;
 	margin: 0 auto;
@@ -84,8 +82,10 @@
 	color: white;
 	padding: 2% 4%;
 		a {
+			font-family: 'Kadwa', serif;
 			text-decoration: none;
-			color: $dkorange;
+			color: white;
+			text-shadow: 1px 1px 2px black;
 			text-transform: uppercase;
 		}
 

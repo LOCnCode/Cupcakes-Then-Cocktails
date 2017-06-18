@@ -1,7 +1,6 @@
 
 
 .alcoholChoices {
-	padding: 1%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -10,7 +9,7 @@
 
 .alcohol-select {
 	width: 100%;
-	background-color: lemonchiffon;
+	margin-left: 2%;
 	display: inline-block;
 	display: flex;
 	flex-direction: row;
@@ -19,13 +18,19 @@
 
 .choice {
 	width: 100%;
-	padding-bottom: 2%;
 		a {
+			font-family: 'Kadwa', serif;
 			text-decoration: none;
 			text-transform: uppercase;
 			color: $dkorange;
 			font-size: 20px;
 			font-weight: 400;
+		}
+		a:hover {
+			color: white;
+			background-color: $mainGreen;
+			border-radius: 5px;
+			padding: 0 2%;
 		}
 }
 
