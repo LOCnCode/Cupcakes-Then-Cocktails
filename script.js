@@ -57,7 +57,7 @@ recipeApp.showData = function(recipes) {
 	recipes.matches.forEach(function(recipe){
 			const recipeWrapper = $("<div>").addClass("recipeWrapper");
 			const recipeContainer = $("<div>").addClass("recipeContainer container");
-			const recipeName = $("<h2>").text(recipe.recipeName).addClass("recipeName");
+			const recipeName = $("<h3>").text(recipe.recipeName).addClass("recipeName");
 			const recipeImage = $("<div>").css({"background-image": `url(${recipe.smallImageUrls[0].replace("=s90", "")}`}).addClass('gallery-image');
 			const emptyDiv = $("<div>").addClass("emptyDiv")
 			const recipeButtonContainer = $("<div>").attr("id", recipe.id).addClass("buttonContainer container");

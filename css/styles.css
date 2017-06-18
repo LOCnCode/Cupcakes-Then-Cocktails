@@ -1,16 +1,15 @@
 body {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   margin: 0 auto;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #00ABBC), color-stop(white), color-stop(white), to(#FFD817));
-  background-image: -webkit-linear-gradient(top, #00ABBC 50%, white, white, #FFD817);
-  background-image: -o-linear-gradient(top, #00ABBC 50%, white, white, #FFD817);
-  background-image: linear-gradient(to bottom, #00ABBC 50%, white, white, #FFD817); }
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(0, 171, 188, 0.85)), color-stop(white), color-stop(white), to(#FFD817));
+  background-image: -webkit-linear-gradient(top, rgba(0, 171, 188, 0.85) 50%, white, white, #FFD817);
+  background-image: -o-linear-gradient(top, rgba(0, 171, 188, 0.85) 50%, white, white, #FFD817);
+  background-image: linear-gradient(to bottom, rgba(0, 171, 188, 0.85) 50%, white, white, #FFD817); }
 
 header {
   margin: 0 auto;
   color: white;
   font-size: 32px;
-  background-color: rgba(0, 171, 188, 0.75);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -51,7 +50,7 @@ header {
   -ms-flex-pack: center;
   justify-content: center; }
 
-h1, h2 {
+h1, h2, h3 {
   margin: 0 auto;
   display: inline-block; }
 
@@ -60,11 +59,17 @@ h1 {
   font-family: 'Great Vibes', cursive;
   font-size: 132px; }
 
-h2 {
+h2, h3 {
   margin-top: 5%;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  text-shadow: 1px 1px 2px black; }
+  letter-spacing: 3px; }
+
+h2 {
+  text-shadow: 3px 3px 2px #00659D; }
+
+h3 {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.85);
+  font-size: 28px; }
 
 .layout {
   width: 100%; }
@@ -130,6 +135,8 @@ main {
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  header {
+    height: 190px; }
   .wrapper {
     width: 100%; } }
 
@@ -177,7 +184,7 @@ main {
     text-transform: uppercase;
     color: #FA4F23;
     font-size: 18px;
-    font-weight: 400; }
+    font-weight: 700; }
   .choice a:hover {
     color: white;
     background-color: #84C04D;
@@ -378,15 +385,12 @@ main {
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  .recipeName {
-    font-size: 16px; }
   .footer-button a {
     padding: 10% 30%; } }
 
 footer {
   font-size: 20px;
   color: white;
-  background-color: #FFDD36;
   text-align: center; }
   footer p {
     margin-bottom: 0; }
