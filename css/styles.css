@@ -140,6 +140,16 @@ main {
   .wrapper {
     width: 100%; } }
 
+.toggle:checked ~ #alcohol-select {
+  display: none; }
+
+.toggle {
+  display: none; }
+
+.toggle:checked + #alcohol-select {
+  left: 0;
+  /*this will bring the nav back on screen when its clicked*/ }
+
 .alcoholChoices {
   display: -webkit-box;
   display: -webkit-flex;
@@ -157,7 +167,8 @@ main {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  position: relative; }
 
 .alcohol-select {
   width: 100%;
@@ -176,14 +187,17 @@ main {
   -ms-flex-pack: distribute;
   justify-content: space-around; }
 
+.menu, .choice a {
+  font-family: 'Kadwa', serif;
+  color: #FA4F23;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase; }
+
 .choice {
   width: 100%; }
   .choice a {
-    font-family: 'Kadwa', serif;
     text-decoration: none;
-    text-transform: uppercase;
-    color: #FA4F23;
-    font-size: 18px;
     font-weight: 700; }
   .choice a:hover {
     color: white;
