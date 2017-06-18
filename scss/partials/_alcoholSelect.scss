@@ -23,45 +23,38 @@
 			text-decoration: none;
 			text-transform: uppercase;
 			color: $dkorange;
-			font-size: 20px;
+			font-size: 18px;
 			font-weight: 400;
 		}
 		a:hover {
 			color: white;
 			background-color: $mainGreen;
 			border-radius: 5px;
-			padding: 0 2%;
+			padding: 2% 4%;
 		}
 }
 
+@media (max-width: 1066px) {
 
-
-@media (max-width: 940px) { //green
-	
-	.choice-container {
-	 	width: 25%;
-	}
-	
-	.alcohol-choice {
-		padding: 6% 0;
-		font-size: 20px;
+	.choice {
+		width: 80%;
+		padding: 2%;
 	}
 
-	.layoutImagesContainer {
-		height: 85%;
+	.choice a {
+		font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 	}
+}
+
+@media (max-width: 940px) {
+
 
 }
 
-@media (max-width: 768px) { //purple
-
-	.choice-container {
-	 	width: 40%;
-	}
-
-	.layoutImagesContainer {
-		height: 82%;
-	}
+@media (max-width: 768px) { 
 
 	.hide {
 		display: none;

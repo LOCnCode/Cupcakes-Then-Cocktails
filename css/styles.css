@@ -1,6 +1,9 @@
 body {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   margin: 0 auto;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #00ABBC), color-stop(white), color-stop(white), to(#FFD817));
+  background-image: -webkit-linear-gradient(top, #00ABBC 50%, white, white, #FFD817);
+  background-image: -o-linear-gradient(top, #00ABBC 50%, white, white, #FFD817);
   background-image: linear-gradient(to bottom, #00ABBC 50%, white, white, #FFD817); }
 
 header {
@@ -8,15 +11,19 @@ header {
   color: white;
   font-size: 32px;
   background-color: rgba(0, 171, 188, 0.75);
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
@@ -27,15 +34,19 @@ header {
     width: 100%; }
 
 .header-text {
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
@@ -59,15 +70,19 @@ h2 {
   width: 100%; }
 
 .wrapper, .alcoholChoices {
-  width: 75%;
+  width: 70%;
   background-color: white;
   margin: 0 auto;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -85,19 +100,31 @@ main {
     font-size: 106px; }
   h2 {
     margin: 5% 0;
-    font-size: 40px; } }
+    font-size: 40px; }
+  .wrapper, .alcoholChoices {
+    width: 80%; } }
+
+@media (max-width: 840px) {
+  .wrapper, .alcoholChoices {
+    width: 90%; } }
+
+@media (max-width: 740px) {
+  .wrapper, .alcoholChoices {
+    width: 100%; } }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   main {
     width: 100%; }
+  .header-text {
+    margin-left: 12%; }
   h1 {
-    margin-top: 5%;
-    margin-left: 20%;
-    font-size: 85px; }
+    margin-top: 0;
+    margin-left: 0;
+    font-size: 55px; }
   h2 {
-    margin: 10% 0 10% 23%;
-    font-size: 30px; }
+    margin: 0;
+    font-size: 25px; }
   .image1 {
     display: none; } }
 
@@ -107,15 +134,20 @@ main {
     width: 100%; } }
 
 .alcoholChoices {
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
@@ -124,9 +156,12 @@ main {
   width: 100%;
   margin-left: 2%;
   display: inline-block;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -141,37 +176,37 @@ main {
     text-decoration: none;
     text-transform: uppercase;
     color: #FA4F23;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400; }
   .choice a:hover {
     color: white;
     background-color: #84C04D;
     border-radius: 5px;
-    padding: 0 2%; }
+    padding: 2% 4%; }
 
-@media (max-width: 940px) {
-  .choice-container {
-    width: 25%; }
-  .alcohol-choice {
-    padding: 6% 0;
-    font-size: 20px; }
-  .layoutImagesContainer {
-    height: 85%; } }
+@media (max-width: 1066px) {
+  .choice {
+    width: 80%;
+    padding: 2%; }
+  .choice a {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Yanone Kaffeesatz', sans-serif; } }
 
 @media (max-width: 768px) {
-  .choice-container {
-    width: 40%; }
-  .layoutImagesContainer {
-    height: 82%; }
   .hide {
     display: none; } }
 
-.layoutImagesContainer {
+.borderImages {
   width: 20%;
   padding: 0 2%;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -182,6 +217,13 @@ main {
   -ms-flex-pack: distribute;
   justify-content: space-around; }
 
+.borderRight {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse; }
+
 .layoutImage {
   width: 100%;
   margin: 0 2%; }
@@ -189,12 +231,16 @@ main {
     width: 100%; }
 
 .recipeWrapper {
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -208,7 +254,7 @@ main {
   margin: 0 auto; }
 
 .recipeContainer {
-  background-color: rgba(252, 137, 144, 0.5);
+  background-color: #84C04D;
   text-align: center; }
 
 .recipeName {
@@ -216,15 +262,15 @@ main {
   margin-bottom: 2%; }
 
 .gallery-image {
-  width: 320px;
-  height: 250px;
+  width: 80%;
+  padding-bottom: 200px;
   display: block;
   margin: 0 auto;
+  margin-top: 3%;
+  border: 5px double white;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
-  .gallery-image img {
-    width: 100%; }
 
 .emptyDiv {
   height: 20px; }
@@ -232,28 +278,33 @@ main {
 .buttonContainer {
   background-color: #84C04D;
   text-align: center;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
 
 .button {
   width: 40%;
+  margin: 0 auto;
+  margin-bottom: 3%;
   background-color: pink;
   color: white;
   font-size: 25px;
   padding: 2%;
   text-transform: uppercase;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  margin: 0 auto; }
+  font-family: 'Yanone Kaffeesatz', sans-serif; }
 
 .linkContainer {
   margin-top: 2%;
@@ -269,7 +320,7 @@ main {
   .linkContainer a:hover {
     color: #FF126C; }
   .linkContainer a:visited {
-    color: #00659D; }
+    color: grey; }
 
 .footer-button {
   width: 20%;
@@ -281,7 +332,8 @@ main {
 @media (max-width: 940px) {
   .gallery-image {
     width: 195px;
-    height: 195px; }
+    height: 195px;
+    padding-bottom: 0; }
   .recipeName {
     margin: 5% 5%;
     font-size: 25px; }
@@ -294,12 +346,16 @@ main {
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   .recipeWrapper {
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
