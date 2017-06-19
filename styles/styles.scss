@@ -1,4 +1,9 @@
 
+@import "partials/variables";
+@import "partials/alcoholSelect";
+@import "partials/getRecipe";
+@import "partials/footer";
+
 // font-family: 'Kadwa', serif;
 // font-family: 'Yanone Kaffeesatz', sans-serif;
 // font-family: 'Great Vibes', cursive;
@@ -70,7 +75,7 @@ h3 {
 	width: 100%;
 }
 
-.wrapper, .alcoholChoices {
+.wrapper {
 	width: 70%;
 	background-color: white;
 	margin:0 auto;
@@ -101,6 +106,12 @@ main {
 	.wrapper, .alcoholChoices {
 		width: 80%;
 	}
+
+	.header-image {
+			img {
+				width: 80%;
+			}
+	}
 }
 
 @media (max-width: 840px) {
@@ -110,44 +121,56 @@ main {
 	}
 }
 
-@media (max-width: 740px) {
-	.wrapper, .alcoholChoices {
-		width: 100%;
-	}
-}
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
-	
+
 	main {
 		width: 100%;
 	}
 	
-	.header-text {
-		margin-left: 12%;
-	}
-	
 	h1 {
-		margin-top: 0;
-    margin-left: 0;
     font-size: 55px;
 	}
 
 	h2 {
-		margin: 0;
 		font-size: 25px;
 	}
+}
 
-	.image1 {
-		display: none;
+@media (max-width: 740px) {
+
+	.wrapper, .alcoholChoices {
+		width: 100%;
+	}
+
+	.headerFixed {
+		background-color: $header;
+		position: fixed;
+		padding-top: 2%;
+		margin-top: -135px;
+	}
+
+	#layout {
+		margin-top: 130px;
 	}
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
 	header {
-		height: 190px;
+		height: 100px;	
 	}
+
+	.header-text {
+		margin-left: 0;
+		margin: 4% 0;
+	}
+
+	.header-image img {
+    width: 85%;
+	}
+
 	.wrapper {
 		width: 100%;
 	}

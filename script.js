@@ -36,7 +36,7 @@ recipeApp.getRecipes = function(alcohol) {  //alcohol
 	});
 };
 
-$("#alcohol-select").on("click", "a", function(){
+$(".alcohol-select").on("click", "a", function(){
     // console.log("new alcohol selected");
     var alcohol = $(this).attr("id");
 		// console.log(alcohol);
