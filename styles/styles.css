@@ -264,12 +264,20 @@
     width: 20%;
     padding: 1%; }
     .footer-button a {
-      padding: 5% 40%; } }
+      padding: 5% 40%; }
+  .wrapper {
+    width: 95%; }
+  .borderImages {
+    width: 10%;
+    background-color: lime; } }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  .wrapper {
+    width: 95%; }
   .borderImages {
-    width: 10%; } }
+    width: 10%;
+    background-color: lime; } }
 
 footer {
   font-size: 20px;
