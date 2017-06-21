@@ -1,11 +1,6 @@
 
   .toggle:checked ~ #alcohol-select {
 	 display: none;
-	// transition:200ms ease;
-	//    position:absolute;
- //    top:36px;
- //    z-index:0;
- //    visibility:hidden;
   }
 
 .toggle {
@@ -13,12 +8,7 @@
   }
 
   .toggle:checked + #alcohol-select {
-    left: 0;  /*this will bring the nav back on screen when its clicked*/
-    // transition: all 0.5s ease;
-    // position:absolute;
-    // top:36px;
-    // z-index:0;
-    // visibility:hidden;
+    left: 0;  
   }
 
 .alcoholChoices {
@@ -104,4 +94,20 @@
 		padding: 3%;
 		margin: 3% 0;
 	}
+}
+
+@media (max-width: 480px) {
+	
+	.choice {
+		width: 100%;
+	}
+
+	.alcoholChoices {
+		width: 95%;
+	}
+
+	.choice a {
+		font-size: 18px;
+	}
+
 }

@@ -5,7 +5,6 @@
 	flex-direction: column;
 	align-content: center;
 	justify-content: space-around; 
-
 }
 
 .borderRight {
@@ -92,11 +91,9 @@
 			text-shadow: 1px 1px 2px black;
 			text-transform: uppercase;
 		}
-
 		a:hover {
 			color: $pink;
 		}
-
 		a:visited {
 			color: grey;
 		}
@@ -166,7 +163,6 @@
     		padding: 5% 40%;
     	}
 	}
-
 	
 	.wrapper {
 		width: 95%;
@@ -174,7 +170,6 @@
 
 	.borderImages {
 		width: 10%;
-		background-color: lime;
 	}
 }
 
@@ -187,6 +182,5 @@
 
 	.borderImages {
 		width: 10%;
-		background-color: lime;
 	}
 }

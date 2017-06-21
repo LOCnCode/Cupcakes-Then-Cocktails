@@ -1,0 +1,20 @@
+footer {
+  font-size: 20px;
+  color: white;
+  text-align: center; }
+  footer p {
+    margin-bottom: 0; }
+  footer a {
+    color: white;
+    text-decoration: none; }
+
+.fa-twitter, .fa-twitter-square {
+  color: white;
+  margin: 2% 3px; }
+
+@media (max-width: 768px) {
+  footer {
+    padding-top: 3%;
+    padding-bottom: 5%; }
+  .footer-button {
+    display: none; } }
